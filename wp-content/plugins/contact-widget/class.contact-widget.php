@@ -45,15 +45,15 @@ class Contact_Widget extends WP_Widget{
         $subject    = $instance['subject'];
         ?>
         <p>
-        <label for="<?php $this->get_field_id('title'); ?>"<?php _e('Title:'); ?>>Title:</label>
+        <label for="<?php $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>">
         </p>
         <p>
-        <label for="<?php $this->get_field_id('recipient'); ?>"<?php _e('Recipient:'); ?>>Recipient:</label>
+        <label for="<?php $this->get_field_id('recipient'); ?>"><?php _e('Recipient:'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('recipient'); ?>" name="<?php echo $this->get_field_name('recipient'); ?>" type="text" value="<?php echo esc_attr($recipient); ?>">
         </p>
         <p>
-        <label for="<?php $this->get_field_id('subject'); ?>"<?php _e('Subject:'); ?>>Subject:</label>
+        <label for="<?php $this->get_field_id('subject'); ?>"><?php _e('Subject:'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('subject'); ?>" name="<?php echo $this->get_field_name('subject'); ?>" type="text" value="<?php echo esc_attr($subject); ?>">
         </p>
 
@@ -108,5 +108,4 @@ class Contact_Widget extends WP_Widget{
         // Return Output String
         return $output;
     }
-
 }
