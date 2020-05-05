@@ -13,13 +13,13 @@ jQuery(document).ready(function(){
         console.log('Contact Form Submitted');
 
         //Serialize Data
-        var formData = jQuery(form.serialize());
+        var formData = jQuery(form).serialize();
 
         //Submit With Ajax (perform an AJAX (asynchronous HTTP) request.)
         jQuery.ajax({
             type: 'POST',
             url: jQuery(form).attr('action'),
-            data: formData
+            data: formData,
         }).done(function (response) {
             //Make sure message is success
             jQuery(formMessages).removeClass('error');
